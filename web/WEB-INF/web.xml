@@ -3,10 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <welcome-file-list>
+        <welcome-file>projekt-list.jsp</welcome-file>
+    </welcome-file-list>
     <servlet>
-        <servlet-name>ProjektEdycja</servlet-name>
-        <servlet-class>com.project.ProjektEdycja</servlet-class>
+        <description></description>
+        <display-name>ProjektServlet</display-name>
+        <servlet-name>ProjektServlet</servlet-name>
+        <servlet-class>com.project.ProjektServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>ProjektServlet</servlet-name>
+        <url-pattern>/ProjektServlet</url-pattern>
+    </servlet-mapping>
     <resource-ref>
         <description>DB Connection</description>
         <res-ref-name>jdbc/postgres</res-ref-name>
